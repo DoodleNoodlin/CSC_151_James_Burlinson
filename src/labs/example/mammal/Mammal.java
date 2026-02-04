@@ -17,7 +17,7 @@ public class Mammal {
         System.out.println(this.food);
         System.out.println(this.weight);
     }
-    public void run() {
+    public void walk() {
     }
 
     public void eat() {

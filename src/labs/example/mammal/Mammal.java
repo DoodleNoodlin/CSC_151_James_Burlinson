@@ -17,7 +17,21 @@ public class Mammal {
         System.out.println(this.food);
         System.out.println(this.weight);
     }
-    public void walk() {
+    public int walk() {
+        int southDistance = 3;
+        
+        int eastDistance = 4;
+        
+        int distance = (int) Math.sqrt(Math.pow(southDistance, 2) + Math.pow(eastDistance, 2));
+        
+        double angleRadians = Math.atan2(southDistance, eastDistance);
+        double angleDegrees = Math.toDegrees(angleRadians);
+        
+        System.out.println("Mammal walked 3 miles South, then 4 miles East");
+        System.out.println("Straight-line distance from start to end: " + distance + " miles");
+        System.out.println("Angle theta at the longest leg: " + angleDegrees + " degrees");
+        
+        return distance;
     }
 
     public void eat() {

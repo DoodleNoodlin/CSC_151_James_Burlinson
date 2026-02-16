@@ -1,3 +1,5 @@
+//James Burlinson;This program is a class with multiple methods and properties describing a mammal;1/22/26
+
 package labs.example.mammal;
 
 public class Mammal {
@@ -8,6 +10,7 @@ public class Mammal {
     private String height = "4 Feet";
     private String food = "Meat";
     private String weight = "95 LB";
+    private String name;
 
     public void getMammalDetails(){
         System.out.println(this.eyeColor);
@@ -60,7 +63,7 @@ public class Mammal {
     }
 
     public void stand() {
-        System.out.println("The mammal is now up and barking");
+        System.out.println("The mammal is now standing");
     }
 
     public void scratch() {

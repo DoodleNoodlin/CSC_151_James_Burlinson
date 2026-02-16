@@ -1,13 +1,15 @@
+//James Burlinson;This program runs methods defined in other programs in the mammal folder;2/3/26
+
 package labs.example.mammal;
 
 public class Main {
     public static void main(String[] args) throws Exception{
-    Mammal mammal = new Mammal();
+    Dog dog = new Dog();
     
-    //mammal.setName("Dog");
-    //String myMammalName = mammal.getname();
-    //System.out.println(myMammalName);
-    
-    mammal.sit();
+    dog.setName("Dog");
+    String myDogName = dog.getName();
+    System.out.println(myDogName);
+    dog.sit();
+    dog.bark();
 }
 }

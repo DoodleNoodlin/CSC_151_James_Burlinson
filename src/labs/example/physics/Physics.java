@@ -20,6 +20,21 @@ public class Physics {
         return m * v;
     }
 
+    public static double getTheta(double xVal, double yVal){
+        double theta = Math.toDegrees(Math.atan2(yVal, xVal));
+        return theta;
+    }
+    
+    // Logs when an angle is not valid for a 3-4-5
+    public static void logInvalidAngleInfo(double angle){
+        System.out.println("logging the angle " + angle + " degrees. This is not a right angle.");
+    }
+
+    // Logs when an angle is valid for a 3-4-5
+    public static void logValidAngleInfo(double angle){
+        System.out.println("logging the angle " + angle + " degrees. This is a valid 3-4-5 triangle");
+    }
+    
     public static double getForce(double m, double a){
         return m * a;
     }
@@ -34,5 +49,25 @@ public class Physics {
 
     public static double getPotentialEnergy(double m, double h){
         return m * GRAVITY * h;
+    }
+
+    // Returns converted speed of light
+    public static double getLightSpeedInMPH(){
+        return 186282.0 * 3600.0;
+    }
+
+    // Computes time for light to travel from the Sun to Earth
+    public static double getTimeFromSunToEarthInHours(){
+        return getKnownDistanceToEarth() / getLightSpeedInMPH();
+    }
+
+    // Average Earth-Sun distance in miles
+    public static double getKnownDistanceToEarth(){
+        return 92947266.72;
+    }
+
+    // Logs when computed Earth-Sun distance dosen't match known distance
+    public static void logEarthToSunInvalidDistance(double distance){
+        System.out.println("logging invalid Earth-Sun distance: " + distance);
     }
 }

@@ -21,5 +21,11 @@ public class Main {
         
         System.out.println("\n=== Testing getDaysAndMonths ===");
         operations.getDaysAndMonths();
+        
+        System.out.println("\n=== Testing sumAndCompareArrays ===");
+        operations.sumAndCompareArrays();
+        
+        System.out.println("\n=== Testing findHighestValue ===");
+        operations.findHighestValue(unsortedArray);
     }
 }

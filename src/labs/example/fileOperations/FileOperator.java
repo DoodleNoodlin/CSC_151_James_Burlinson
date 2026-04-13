@@ -72,7 +72,7 @@ public class FileOperator {
         return students;
     }
     
-    //Parses a CSV line to create a grade object
+    //Parse a CSV line to create a grade object
     private static StudentGrade parseStudentLine(String line) {
         try {
             String[] parts = line.split(",");
@@ -102,7 +102,7 @@ public class FileOperator {
         }
     }
     
-    //Ensure the error log file exists, create it if it doesn't
+    //Ensure error log file exists, create if it doesn't
     private static void ensureErrorLogExists() {
         File errorLogFile = new File(ERROR_LOG_PATH);
         
@@ -123,7 +123,7 @@ public class FileOperator {
         }
     }
     
-    //Logs an error message to the error log file
+    //Logs error message to the error log file
     private static void logError(String message, Exception e) {
         try (FileWriter fw = new FileWriter(ERROR_LOG_PATH, true);
              BufferedWriter writer = new BufferedWriter(fw)) {
@@ -142,7 +142,7 @@ public class FileOperator {
         }
     }
     
-    // Class to represent a student and their grades
+    // Class to represent student and grades
     private static class StudentGrade {
         private String name;
         private double[] grades;

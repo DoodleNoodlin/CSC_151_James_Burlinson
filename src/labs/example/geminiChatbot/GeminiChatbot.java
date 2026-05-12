@@ -1,3 +1,5 @@
+//James Burlinson, this program runs a functional chatbot using a gemini api key, 5/6/26
+
 package labs.example.geminiChatbot;
 
 import java.net.URI;
